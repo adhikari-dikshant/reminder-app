@@ -63,7 +63,7 @@ async function CollectionList() {
     return (
       <div className="flex flex-col gap-5">
         <Alert>
-          {/*<SadFace />*/}
+          <SadFace />
           <AlertTitle className="text-2xl">There are no collections yet!</AlertTitle>
           <AlertDescription className="text-xl">
             Create a collection to get started
