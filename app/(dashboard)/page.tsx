@@ -1,11 +1,11 @@
+import CollectionCard from "@/components/CollectionCard";
+import CreateCollectionBtn from "@/components/CreateCollectionBtn";
+import SadFace from "@/components/icons/SadFace";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Skeleton } from "@/components/ui/skeleton";
 import { prisma } from "@/lib/prisma";
 import { currentUser } from "@clerk/nextjs";
 import { Suspense } from "react";
-import SadFace from "@/components/icons/SadFace";
-import CreateCollectionBtn from "@/components/CreateCollectionBtn";
-import CollectionCard from "@/components/CollectionCard";
 
 export default async function Home() {
   return (
@@ -63,8 +63,8 @@ async function CollectionList() {
       <div className="flex flex-col gap-5">
         <Alert>
           <SadFace />
-          <AlertTitle className="text-2xl">There are no collections yet!</AlertTitle>
-          <AlertDescription className="text-xl">
+          <AlertTitle>There are no collections yet!</AlertTitle>
+          <AlertDescription>
             Create a collection to get started
           </AlertDescription>
         </Alert>
