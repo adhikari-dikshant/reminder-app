@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'REMIND ME!',
-  description: 'A Full Stack Remind Me Application.',
+  description: 'A task planning/to-do Application.',
 }
 
 export default function RootLayout({
@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
-      <html lang="en" 
+      <html lang="en"
         className={cn(inter.className, "dark")}
         style={{
           colorScheme: "dark"
@@ -36,16 +36,16 @@ export default function RootLayout({
               flex-col
               items-center
               dark:bg-black">
-            <Navbar/>
-            <Separator />
-            <main className="flex flex-grow w-full justify-center items-center dark:bg-neutral-950">
-              {children}
-            </main>
-          </div>
+              <Navbar />
+              <Separator />
+              <main className="flex flex-grow w-full justify-center items-center dark:bg-neutral-950">
+                {children}
+              </main>
+            </div>
           </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>
-    
+
   )
 }
